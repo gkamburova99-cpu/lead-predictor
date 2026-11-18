@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>LeadPredictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Лява лента с настройки -->
+        <aside class="sidebar">
+            <h2>LeadPredictor</h2>
+            <div class="form-group">
+                <label>Total Revenue ($)</label>
+                <input type="number" id="revenue" value="10000">
+            </div>
+            <div class="form-group">
+                <label>Avg. Order Value ($)</label>
+                <input type="number" id="avgOrder" value="1000">
+            </div>
+        </aside>
+
+        <!-- Дясна част с резултати и формули -->
+        <main class="main-content">
+            <div class="card">
+                <h3>Customers</h3>
+                <p id="customersResult">10</p>
+            </div>
+            <div class="card">
+                <h3>Leads</h3>
+                <p id="leadsResult">25</p>
+            </div>
+            <div class="card">
+                <h3>Prospects</h3>
+                <p id="prospectsResult">125</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
