@@ -1,0 +1,45 @@
+body {
+    background-color: #121824;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    gap: 20px;
+}
+.sidebar {
+    background-color: #1a2233;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #fff;
+    border-radius: 4px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+.card {
+    background-color: #1a2233;
+    padding: 20px;
+    border-radius: 8px;
+}
