@@ -25,7 +25,8 @@ body {
     font-size: 14px;
     color: #94a3b8;
 }
-.form-group input {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 10px;
     background-color: #0f172a;
@@ -33,6 +34,26 @@ body {
     color: #fff;
     border-radius: 4px;
     box-sizing: border-box;
+}
+.form-group select { height: 42px; }
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.label-row label { margin-bottom: 0; }
+.label-row output {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: 700;
+}
+.form-group input[type="range"] {
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    accent-color: #3b82f6;
 }
 .main-content {
     display: flex;
@@ -50,7 +71,6 @@ body {
     .container {
         flex-direction: column;
     }
-
     .sidebar {
         width: 100%;
     }

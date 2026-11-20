@@ -1,9 +1,12 @@
-
 function calculate() {
     const revenueInput = document.getElementById('revenue');
     const avgOrderInput = document.getElementById('avgOrder');
+    const leadRateInput = document.getElementById('leadRate');
+    const prospectRateInput = document.getElementById('prospectRate');
     const revenue = revenueInput.valueAsNumber;
     const avgOrder = avgOrderInput.valueAsNumber;
+    const leadResponseRate = leadRateInput.valueAsNumber;
+    const prospectResponseRate = prospectRateInput.valueAsNumber;
 
     const revenueIsValid = Number.isFinite(revenue) && revenue >= 0;
     const avgOrderIsValid = Number.isFinite(avgOrder) && avgOrder > 0;
@@ -17,13 +20,12 @@ function calculate() {
         return;
     }
 
+    document.getElementById('leadRateValue').textContent = `${leadResponseRate}%`;
+    document.getElementById('prospectRateValue').textContent = `${prospectResponseRate}%`;
+
     // Формула 01
     const customers = revenue / avgOrder;
     document.getElementById('customersResult').textContent = customers.toFixed(0);
-
-    // Приемаме примерни проценти за отговор (например 20% за leads и 40% за prospects от слайдера/полетата)
-    const leadResponseRate = 20; 
-    const prospectResponseRate = 40;
 
     // Формула 02
     const leads = (customers * 100) / leadResponseRate;
@@ -36,4 +38,12 @@ function calculate() {
 
 document.getElementById('revenue').addEventListener('input', calculate);
 document.getElementById('avgOrder').addEventListener('input', calculate);
+document.getElementById('leadRate').addEventListener('input', calculate);
+document.getElementById('prospectRate').addEventListener('input', calculate);
+
+document.getElementById('currency').addEventListener('change', function () {
+    document.querySelector('label[for="revenue"]').textContent = `Total Revenue (${this.value})`;
+    document.querySelector('label[for="avgOrder"]').textContent = `Avg. Order Value (${this.value})`;
+});
+
 calculate();
